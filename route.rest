@@ -1,0 +1,46 @@
+
+
+
+
+####
+POST  http://localhost:5007/products
+Content-Type: application/json
+Accept: application/json
+
+   {
+        "name": "Product 9",
+        "price": 125,
+        "quantity": 12,
+        "unit": "l",
+        "description": "This is a product description"
+    }
+
+####
+GET http://localhost:5007/products
+Content-Type: application/json
+
+###
+GET http://localhost:5007/products?sortBy=price&lesserThan=120
+Content-Type: application/json
+
+###
+GET http://localhost:5007/products?sortBy=price&greaterThan=120
+Content-Type: application/json
+
+
+###
+PUT http://localhost:5007/products/63d93b0514b85e2cb9b3061e
+Content-Type: application/json
+
+{
+    "name": "Product  modified"
+}
+
+
+###
+DELETE http://localhost:5007/products/63d93b0514b85e2cb9b23061
+Content-Type: application/json
+
+###
+GET http://localhost:5007/products/report
+Content-Type: application/json
